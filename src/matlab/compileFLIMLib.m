@@ -110,4 +110,10 @@ for file = files
     delete(file{1});
 end
 
+% We need to clear mex after compiling. In Windows if we try to re-compile
+% without having run `clear mex` we will get the following error:
+%       mt : general error c101008d: Failed to write the updated manifest to the resource of
+%       file "mxFLIMLib.mexw64". Access is denied.  
+clear mex;
+
 fprintf('Finished compiling mxFLIMLib.\n');

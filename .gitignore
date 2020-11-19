@@ -4,6 +4,7 @@
 target
 build
 src/matlab/*.mex*
+src/matlab/demoFLIMLib.pdf
 src/main/c/doxygen.exe
 *.log
 /bin/
